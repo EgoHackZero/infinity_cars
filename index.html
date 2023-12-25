@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinity cars</title>
+    <link rel="icon" href="https://freesvg.org/img/Infinity-Symbol.png" type="image/png">
+    <link rel="stylesheet" href="public/css/print.css">
+    <link rel="stylesheet" href="screenStyle.css">
+    
+  </head>
+  <body class="body_in">
+    <header class="header_in">
+      <div class="container">
+        <div class="header_top_in">
+          <img class="header_logo_in" src="fig/Infinity-Symbol.png" alt="main logo">
+          <h1 class="header_top_title">Infinity cars</h1>
+          <a class="gmail_a" href="mailto:yehor.nepokrytyi@student.tuke.sk">
+            <img class="gmail" src="fig/gmail.png" alt="gmail icon">
+          </a>
+        </div>
+      </div>        
+    </header>
+    <div class="container">
+      <h1>Infiniti cars</h1>
+      <p>
+        This page is about the incredible cars of our time that are amazing not only in design but also in technical characteristics.
+      </p>
+      <ul>
+        <li class="title_list"><a class="title_list" href="article1.html">MERCEDES VISION AVTR</a><br><hr></li>
+        
+        <li class="title_list"><a class="title_list" href="article2.html">Tesla Roadster</a><br><hr></li>
+        
+        <li class="title_list"><a class="title_list" href="article3.html">Lamborgini AVENTADOR SVJ</a><br><hr></li>
+        
+      </ul>
+    </div>
+    <div class="container">
+        <h1>Comments</h1>
+      <div id="comment-field" class="com"></div>   
+    </div>
+    <script id="template" type="mustache/x-tmpl-mustache">
+      <h3>{{name}}({{created}}) Opinion: {{grade}} </h3>
+      <p>Comment: {{comment}}</p>
+    </script>
+    <div class="container footer">
+      <img src="fig/Infinity-Symbol.png" alt="Infinity-Symbol" class="back">
+      <br>
+      <a href="mailto:yehor.nepokrytyi@student.tuke.sk">Made by: Yehor Nepokrytyi.</a>
+    </div>
+    <form class="decor" id="form">
+      <div class="form-left-decoration"></div>
+      <div class="form-right-decoration"></div>
+      <div class="form-inner">
+      <h3>Reviews</h3>
+      <input type="text" placeholder="Username" id = "User" pattern="[A-Za-z].{2,}" title="Min. 2 leters and leters only" required>
+      <input type="email" placeholder="Email" id = "EmailUser" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="An element with type=[email] that must be in the following order: characters@characters.domain (characters followed by an @ sign, followed by more characters, and then a [.])" required>
+      <input type="url" id = "UserUrl" placeholder="URL of image">
+      <h3>Sex:</h3>
+      <input type="radio" id="sex1" style="width: auto; display: inline;" class="custom-control-input-male" name = "fig">
+      <label class="custom-control-label" for="sex1">Male</label>
+      <input type="radio" id="sex2" class="custom-control-input-female" style="width: auto; display: inline;" name = "fig">
+      <label class="custom-control-label" for="sex2">Female</label>
+      <h3>What sites do you like?</h3>
+      <input type="checkbox" class="custom-control-input" style="width: auto; display: inline;" id="site1">
+      <label class="custom-control-label" for = "site1">MERCEDES VISION AVTR</label>
+      <br>
+      <input type="checkbox" class="custom-control-input" style="width: auto; display: inline;" id="site2">
+      <label class="custom-control-label" for = "site2">Tesla Roadster</label>
+      <br>
+      <input type="checkbox" class="custom-control-input" style="width: auto; display: inline;" id="site3">
+      <label class="custom-control-label" for = "site3">Lamborgini AVENTADOR</label>
+      <textarea id="opn" title="Min. 2 leters and leters only" placeholder="Text of comment..." rows="3" required></textarea>
+        <label for="grad">How would you rate our site?</label>
+        <input id = "grad" name="grade" list="grades" pattern="[A-Za-z].{1,}" title="Min. 2 leters and leters only">
+        <datalist id="grades">
+          <option value="Unbelievable">
+          <option value="Good">
+          <option value="Nice">
+          <option value="Can be better">
+          <option value="Make it brand new next time">
+        </datalist>
+      <input type="submit" value="Send" id="comment-add">
+      <input type="reset" value="Reset">
+      </div>
+    </form>
+    <script src="https://unpkg.com/mustache@latest"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="public/css/localStorage.js"></script>
+  </body>
+</html>
